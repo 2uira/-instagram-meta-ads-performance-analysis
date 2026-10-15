@@ -24,4 +24,21 @@
 
 The raw export needed significant work before analysis:
 
-- **~30 inconsistent content labels
+- **~30 inconsistent content labels → 11 clean categories.** Merged abbreviations (BI / IB / Business Insight), mixed English and Indonesian labels, casing variants and multi-tagged posts.
+- **107 missing posts recovered.** An initial weekday-based filter silently dropped May–Nov 2022; filtering on date validity restored the full 636-post history.
+- **Impossible values handled.** One post recorded more likes than reach (a logging error); its engagement rate was excluded rather than guessed.
+- Rebuilt a 3-row merged Excel header and fixed malformed dates and day values.
+
+## Files
+
+| File | Contents |
+| --- | --- |
+| [Analysis notebook](BWI%20Instagram%20Ads%20Analysis%2022-25.ipynb) | Python cleaning, analysis and regression |
+| [Full report (PDF)](BWI_Instagram_Ads_Report_2022-2025.pdf) | Findings and recommendations for the marketing team |
+| [Power BI dashboard (.pbix)](BWI%20Instagram%20Performance%20Report%2022-25.pbix) | Interactive dashboard (requires Power BI Desktop) |
+
+## Tools
+
+Python (pandas, matplotlib, statsmodels) · Power BI · Google Colab
+
+*Raw data is not included for confidentiality.*
